@@ -18,43 +18,30 @@ $(function () {
     // console.log(userInput); //outputs the user input
     localStorage.setItem(timeId, userInput); //sets hour:task in local storage
   });
-  
 
-  
-
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-
+//
 var divTimeBlockEl = $('.time-block');
-var divTimeId = []; //array for each time block
+var divTimeId = []; //array for each time block id
 
-$(divTimeBlockEl).each(function() { //this function iterates through each id tag and stores the value into an array
-  var id = $(this).prop('id');
+$(divTimeBlockEl).each(function () {
+  //this function changes the color of each time block
+
+  var id = $(this).prop("id");
   divTimeId.push(id);
-});
-
-function blockDisplayColor() {
-var currentHour = dayjs().format('H')
-var parsedCurrentHour = parseInt(currentHour);
-  for (i = 0; i < divTimeId.length; i++){
-  var parsedDivTimeId = parseInt(divTimeId[i]);
+  var currentHour = dayjs().format("H");
+  var parsedCurrentHour = parseInt(currentHour);
+  for (i = 0; i < divTimeId.length; i++) {
+    var parsedDivTimeId = parseInt(divTimeId[i]);
     if (parsedDivTimeId === parsedCurrentHour) {
-      divTimeBlockEl.addClass('present')
-    }else if (parsedDivTimeId > parsedCurrentHour){
-      divTimeBlockEl.addClass('future')
-    }else{
-      divTimeBlockEl.addClass('past')
-    } 
+      $(this).addClass("present");
+    } else if (parsedDivTimeId > parsedCurrentHour) {
+      $(this).addClass("future");
+    } else {
+      $(this).addClass("past");
+    }
   }
-}
-blockDisplayColor();
-
-// divTimeBlockEl.addClass('present');
-  
-  //if current hour is current or ahead of id block time then (red[current] or green[future]); else if current time has passed then grey color [dud]
+});
+//
   // TODO: Add code to get any user input that was saved in localStorage and set the values of the corresponding textarea elements. HINT: How can the id attribute of each time-block be used to do this?
 
   var taskData = localStorage.getItem('userInput') || {}; // uses the '||' or operator to tell jS to check if there's any data in localStorage and if not, return an empty object
