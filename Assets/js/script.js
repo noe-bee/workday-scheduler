@@ -6,7 +6,7 @@ $(function () {
 
   saveButtonEl.on("click", function (event) {
     //'this' refers to the saveButtonEl
-    var timeId= $(this).parent().attr("id"); //stores the id value of the saveButtonEl
+    var timeId = $(this).parent().attr("id"); //stores the id value of the saveButtonEl
     var userInput = $(this).parent().find(".description").val(); //stores userInput of the parent element of the buttonEl
     localStorage.setItem(timeId, userInput); //sets time:task in local storage
   });
@@ -34,21 +34,13 @@ $(function () {
     }
   });
   //
-  var taskData = localStorage.getItem("userInput") || {}; // uses the '||' or operator to tell jS to check if there's any data in localStorage and if not, return an empty object
-  // taskData = JSON.parse(taskData);
-  // console.log(taskData);
-  //
   var textAreaEl = $("textarea");
 
   textAreaEl.each(function () {
-    textAreaId = $(this).parent().attr('id') //id of each parent element of <textarea>
-    // console.log(textAreaId)
-
-    $(this).val(taskData); //use .val() instead 
-  })
-
-  // TODO: Add code to get any user input that was saved in localStorage and set the values of the corresponding textarea elements. HINT: How can the id attribute of each time-block be used to do this?
-
+    var textAreaId = $(this).parent().attr("id"); //id of each parent element of <textarea>
+    var taskData = localStorage.getItem(textAreaId);
+    $(this).val(taskData); //use .val() instead
+  });
   //
   var timeDisplayEl = $("#currentDay");
   function displayTime() {
