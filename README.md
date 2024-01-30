@@ -1,105 +1,28 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Workday-Scheduler
 
-## Your Task
+## Description
 
-Create a simple calendar application that allows a user to save events for each hour of a typical working day (9am&ndash;5pm) by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+- The purpose of this this challenge was to create a simple workday schedule that allows the user to save what tasks they plan to do for the day. Although this challenge only had me create time blocks for the standard 9-5 workday hours, this small assignment still had its challenges. Especially when it came to local storage, I realized how tricky it can be for me to know how to properly retrieve data depending on the type of data. I also realized how important local storage is and how it is heavily relied on by users to store their data so that they may be able to refer to it for future use.
 
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
+## Installation
 
-## User Story
+N/A
 
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+## Usage
+- The way to use this application is fairly simple. User will add their tasks for the day and will be able to refer to it as needed. The timeblocks also change color depending on if a task has passed its hour block, currently going on, or if it is yet to come.
 
-## Acceptance Criteria
+  GitHub page: https://noe-bee.github.io/workday-scheduler/ <br></br>
+  GitHub repository: https://github.com/noe-bee/workday-scheduler
 
-```md
-GIVEN I am using a daily planner to create a schedule
+ ![image](./assets/workday-scheduler-ss.png)
 
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
+## Credits
 
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours of 9am&ndash;5pm
+N/A
 
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
 
-WHEN I click into a timeblock
-THEN I can enter an event
+## License
 
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
+Refer to the license on the repository.
 
-WHEN I refresh the page
-THEN the saved events persist
-```
-
-The following animation demonstrates the application functionality:
-
-<!-- @TODO: create ticket to review/update image) -->
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
-
-## Grading Requirements
-
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
-
-This Challenge is graded based on the following criteria:
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * Uses a date utility library to work with date and time
-
-### Deployment: 32%
-
-* Application deployed at live URL
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+---
